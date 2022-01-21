@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+
+    --black: #0d114f;
+    --white: #fafafa;
+    --red:#FF0000;
+    --light-blue: #e0ecff;
+    --blue:#0000FF;
+    --background:#f6faff;
+    --overlay:#040911;
+    --icons-details:#a5b0c1;
+
+    --grey-dark: #4D5E77;
+    --gry-blue: #A1B2CD;
+    --grey-light: #E5EAF1;
+
+    /* 1 rem = 16px (user agent) = 100%,  */
+    font-size: 2.8%
+}
