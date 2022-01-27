@@ -12,6 +12,7 @@ header {
 #bg {
     grid-area: left;
     background: url('/Projeto/Assets/home-bg-img.svg') no-repeat top/contain;
+    background-position: -10rem;
 }
 
 main {
@@ -19,10 +20,11 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 14rem;
 }
 
 a main .container {
-    width: min(36.3rem 100%);
+    width: min(36.3rem, 100%);
 }
 
 main h2 {
