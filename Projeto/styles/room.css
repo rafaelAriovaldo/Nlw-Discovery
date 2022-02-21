@@ -86,3 +86,33 @@
     padding: .8rem;
     line-height: 2.4rem;
 }
+
+
+/*questions*/
+
+.questions-wrapper {
+    background: var(--light-blue);
+    margin-bottom: .8rem;
+    border-radius: 0 .8rem .8rem .8rem;
+    padding: 2.4rem;
+}
+
+.questions-wrapper .questions-content {
+    display: flex;
+    align-items: center;
+}
+
+.questions-wrapper .questions-content p {
+    margin-left: 1.6rem;
+}
+
+.questions-wrapper .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.questions-wrapper .actions>a {
+    display: flex;
+    align-items: center;
+}
