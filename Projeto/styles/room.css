@@ -102,6 +102,12 @@
     align-items: center;
 }
 
+.questions-wrapper .questions-content .user {
+    background: #008cff;
+    clip-path: circle();
+    padding: 1.4rem;
+}
+
 .questions-wrapper .questions-content p {
     margin-left: 1.6rem;
 }
@@ -115,4 +121,20 @@
 .questions-wrapper .actions>a {
     display: flex;
     align-items: center;
+}
+
+.questions-wrapper .actions>a>img {
+    margin-right: .8rem;
+}
+
+.questions-wrapper .actions>a+a {
+    margin-left: 2.4rem;
+}
+
+.questions-wrapper.read {
+    background: var(--grey-medium);
+}
+
+.questions-wrapper.read .questions-content .user {
+    background: var(--grey-blue);
 }
