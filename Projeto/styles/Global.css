@@ -11,7 +11,7 @@ html {
     --white: #fafafa;
     --red: #FF0000;
     --light-blue: #e0ecff;
-    --blue: #0000FF;
+    --blue: #0ac4f3;
     --background: #f6faff;
     --overlay: #040911;
     --icons-details: #a5b0c1;
@@ -64,7 +64,6 @@ button,
 
 button,
 .button {
-    padding: 2rem 10rem 2rem 10rem;
     font-family: 'Poppins';
     font-weight: 500;
     line-height: 0;
@@ -100,6 +99,27 @@ button.button {
     width: 100%;
     margin-bottom: 1.8rem;
 }
+
+button.red,
+.button.red {
+    background: var(--red);
+    color: var(--white);
+}
+
+.button.grey,
+.button.grey {
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+.button.purple,
+.button.purple {
+    background: rgb(133, 71, 204);
+    color: var(--white);
+}
+
+
+/*Header*/
 
 .content header {
     width: 80%;

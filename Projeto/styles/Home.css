@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 11.4rem 1fr;
-    grid-template-areas: 'header header' 'left right'
+    grid-template-areas: 'header header' 'left right';
 }
 
 header {
@@ -27,7 +27,7 @@ a main .container {
 }
 
 main h2 {
-    font: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--black);
     font-size: clamp(20px, 5vw, 2.8rem);
     margin-bottom: 2.4rem;
@@ -36,6 +36,10 @@ main h2 {
 input {
     border: 0.2rem solid var(--grey-blue);
     padding: 0 1.6rem;
+}
+
+button {
+    width: 36rem;
 }
 
 .separetor {

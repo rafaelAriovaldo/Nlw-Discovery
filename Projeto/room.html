@@ -10,6 +10,7 @@
     <!--link css-->
     <link rel="stylesheet" href="./styles/Global.css">
     <link rel="stylesheet" href="./styles/room.css">
+    <link rel="stylesheet" href="./styles/modal.css">
     <title>Rocket.Q - Perguntas e Respostas</title>
     <!--link de fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,14 +94,14 @@
                     </div>
                 </div>
 
-                <div class="questions-wrapper read">
+                <div class="questions-wrapper">
                     <div class="questions-content">
                         <div class="user">
                             <img src="./Assets/user.svg">
                         </div>
                         <div class="question">
                             <p>
-                                O que typeScript ?</p>
+                                Qual importancia do javascript na vida cotidiana do desenvlovedor web ? E o php? Explequi cada com suas palavras. </p>
                         </div>
                     </div>
 
@@ -112,10 +113,45 @@
                         </a>
                     </div>
                 </div>
+
+
+                <div class="questions-wrapper read">
+                    <div class="questions-content">
+                        <div class="user">
+                            <img src="./Assets/user.svg">
+                        </div>
+                        <div class="question">
+                            <p>
+                                O que typeScript ?</p>
+                        </div>
+                    </div>
+
+
+                    <div class="actions">
+
+                        <img src="./Assets/trash.svg" alt=""> excluir
+                        </a>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
+    <!--Modal-->
+    <div class="modal-wrapper">
+        <div class="modal">
+            <h2>Excluir Pergunta</h2>
+            <p>Você tem certeza que deseja excluir ?</p>
+            <form action="#">
+                <label class="sr-only" for-id="password">Digite sua senha admin</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha" />
 
+                <div class="buttons">
+                    <div class="button grey">Cancelar</div>
+                    <button class="red">Sim, excluir</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
