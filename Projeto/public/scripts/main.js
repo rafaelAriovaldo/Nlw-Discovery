@@ -1,6 +1,6 @@
-import modal from './modal.js'
+import Modal from './modal.js'
 
-const modal = modal();
+const modal = Modal();
 //pegar todos os botoes da classe check
 const checkButtons = document.querySelectorAll(".actions a.check")
     //Marcar como lido quando clicado
