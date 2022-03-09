@@ -9,8 +9,10 @@ server.set('view engine', 'ejs')
 server.use(express.static("public"))
 
 server.set('views', path.join(__dirname, 'views'))
+
 server.use(express.urlencoded({ extende: true }))
 const { dirname } = require('path')
+const { appendFile } = require('fs')
 
 
 
