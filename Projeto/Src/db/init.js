@@ -4,14 +4,13 @@ const initDb = {
     async init() {
         const db = await Database()
 
-        await db.exec(`CREATE TABLE rooms 
-        (id INTEGER PRYMARY KEY, pass TEXT
-            )`);
-        await db.exec(`CREATE TALBE questions 
-        (id INTERGER PRIMARY KEY AUTO INCREMENT,
+        await db.exec(`CREATE TABLE rooms (
+            id INTEGER PRIMARY KEY,
+             pass TEXT)`);
+        await db.exec(`CREATE TABLE questions 
+        (id INTEGER PRIMARY KEY AUTOINCREMENT,
             titulo TEXT,
-            read INT
-            )`);
+            read INT)`);
 
         await db.close();
     }
