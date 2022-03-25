@@ -27,9 +27,12 @@
                 <img src="/images/logo.svg" alt="Rocket.Q Logo " />
             </a>
             <div class="buttons">
-                <div class="button outlined" id="room-id" data-id="323232">
-                    #323232
-                    <img src="/images/copy.svg" />
+                <div class="button outlined" id="room-id" data-id="<%= roomId  %> ">
+
+
+                    #
+                    <%= roomId  %>
+                        <img src="/images/copy.svg" />
                 </div>
                 <a href="#" class="button">
                     <img src="/images/users-white.svg" />Criar sala
@@ -39,7 +42,7 @@
         <main>
             <section id="question-form">
                 <h2>Faça sua pergunta</h2>
-                <form action="">
+                <form action="/question/create/<%= roomId %> " method="post">
                     <label class="sr-only" for-id="question">O que você quer perguntar?</label>
                     <textarea name="question" id="question" placeholder="O que quer perguntar?"></textarea>
                     <footer>
@@ -54,68 +57,33 @@
             <section id="question">
                 <h2 class="sr-only">Perguntas da comunidade</h2>
                 <div class="questions">
+                    <% questions.forEach(question => { %>
+                        <div class="questions-wrapper">
+                            <div class="questions-content">
+                                <div class="user">
+                                    <img src="/images/user.svg">
+                                </div>
+                                <div class="question">
+                                    <p>
+                                        <%= question.title  %>
+                                    </p>
+                                </div>
+                            </div>
 
-                </div>
-                <div class="questions-wrapper">
-                    <div class="questions-content">
-                        <div class="user">
-                            <img src="/images/user.svg">
+                            <div class="actions">
+                                <a href="#" class="check" data-id="2">
+                                    <img src="/images/check.svg">marcar como lida</a>
+                                <a href="#" class="delete" data-id="2">
+                                    <img src="/images/trash.svg" alt=""> excluir
+                                </a>
+                            </div>
                         </div>
-                        <div class="question">
-                            <p>
-                                Qual a diferença de const, var e let no java-script ?</p>
-                        </div>
-                    </div>
 
-                    <div class="actions">
-                        <a href="#" class="check" data-id="2">
-                            <img src="/images/check.svg">marcar como lida</a>
-                        <a href="#" class="delete" data-id="2">
-                            <img src="/images/trash.svg" alt=""> excluir
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="questions-wrapper">
-                    <div class="questions-content">
-                        <div class="user">
-                            <img src="/images/user.svg">
-                        </div>
-                        <div class="question">
-                            <p>
-                                O que é java-script ?</p>
-                        </div>
-                    </div>
-
-                    <div class="actions">
-                        <a href="#" class="check" data-id="3">
-                            <img src="/images/check.svg">marcar como lida</a>
-                        <a href="#" class="delete" data-id="3">
-                            <img src="/images/trash.svg" alt=""> excluir
-                        </a>
-                    </div>
+                        <% }); %>
                 </div>
 
-                <div class="questions-wrapper">
-                    <div class="questions-content">
-                        <div class="user">
-                            <img src="/images/user.svg">
-                        </div>
-                        <div class="question">
-                            <p>
-                                Qual importancia do javascript na vida cotidiana do desenvlovedor web ? E o php? Explequi cada com suas palavras. </p>
-                        </div>
-                    </div>
 
-                    <div class="actions">
-                        <a href="#" class="check" data-id="4">
-                            <img src="/images/check.svg">marcar como lida</a>
-                        <a href="#" class="delete" data-id="4">
-                            <img src="/images/trash.svg" alt=""> excluir
-                        </a>
-                    </div>
-                </div>
+
 
 
                 <div class="questions-wrapper read">
