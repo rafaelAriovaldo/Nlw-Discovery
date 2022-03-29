@@ -17,4 +17,4 @@ const { appendFile } = require('fs')
 
 
 server.use(route)
-server.listen(7000, () => console.log("Run"))
+server.listen(3000, () => console.log("Run"))

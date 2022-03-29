@@ -29,8 +29,14 @@ module.exports = {
     async open(req, res) {
         const db = await Database()
         const roomId = req.params.room
-        const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId}`)
-        res.render("room", { roomId: roomId, questions: questions })
+        const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId} and read = 0`)
+        const questionsRead = await db.all(`SELECT * FROM questions WHERE room = ${roomId} and read = 1`)
+            //   return res.json({ roomId: roomId, questions: questions })
+        res.render("room", {
+            roomId: roomId,
+            questions: questions,
+            questionsRead: questionsRead
+        })
     }
 
 }
