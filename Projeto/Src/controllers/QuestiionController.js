@@ -14,9 +14,12 @@ module.exports = {
             } else if (action == "check") {
                 await db.run(`UPDATE questions  SET read = 1 WHERE id = ${questionId}`)
             }
-        }
-        res.redirect(`/room/${roomId}`)
+            res.redirect(`/room/${roomId}`)
+
+        } else { res.render('passincorrect', { roomId: roomId }) }
+
     },
+
     async create(req, res) {
         const db = await Database()
         const question = req.body.question
